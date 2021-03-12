@@ -13,6 +13,7 @@
 		8F3DE18F25FB903F00B76DB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3DE18E25FB903F00B76DB8 /* Preview Assets.xcassets */; };
 		8F3DE19A25FB903F00B76DB8 /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DE19925FB903F00B76DB8 /* CommentCardWriterTests.swift */; };
 		8F3DE1A525FB903F00B76DB8 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DE1A425FB903F00B76DB8 /* CommentCardWriterUITests.swift */; };
+		8FAF849825FB93D6003319B9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAF849725FB93D6003319B9 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		8F3DE1A025FB903F00B76DB8 /* CommentCardWriterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3DE1A425FB903F00B76DB8 /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		8F3DE1A625FB903F00B76DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FAF849725FB93D6003319B9 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +97,9 @@
 		8F3DE18625FB903D00B76DB8 /* CommentCardWriter */ = {
 			isa = PBXGroup;
 			children = (
+				8FAF849D25FB940E003319B9 /* View */,
+				8FAF849C25FB93EB003319B9 /* Model */,
 				8F3DE18725FB903D00B76DB8 /* CommentCardWriterApp.swift */,
-				8F3DE18925FB903D00B76DB8 /* ContentView.swift */,
 				8F3DE18B25FB903F00B76DB8 /* Assets.xcassets */,
 				8F3DE19025FB903F00B76DB8 /* Info.plist */,
 				8F3DE18D25FB903F00B76DB8 /* Preview Content */,
@@ -128,6 +131,22 @@
 				8F3DE1A625FB903F00B76DB8 /* Info.plist */,
 			);
 			path = CommentCardWriterUITests;
+			sourceTree = "<group>";
+		};
+		8FAF849C25FB93EB003319B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FAF849725FB93D6003319B9 /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8FAF849D25FB940E003319B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F3DE18925FB903D00B76DB8 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F3DE18A25FB903D00B76DB8 /* ContentView.swift in Sources */,
+				8FAF849825FB93D6003319B9 /* Comment.swift in Sources */,
 				8F3DE18825FB903D00B76DB8 /* CommentCardWriterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
