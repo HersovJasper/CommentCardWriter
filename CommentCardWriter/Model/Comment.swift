@@ -12,10 +12,9 @@ class Comment {
     let code: String
     let effort: Int
     let enjoyment: Int
-    let anticipation: String
     var finalComment: String
 
-    static func generateComment(subject: String, effort: Int, enjoyment: Int, anticipation: String){
+    static func generateComment(_ subject: String,_ effort: Int,_ enjoyment: Int) -> String{
         let effortString: String
         let enjoymentString: String
         switch effort{
@@ -34,27 +33,28 @@ class Comment {
         }
         switch enjoyment{
         case 1:
-            enjoymentString = "I haven't enjoyed lessons at all."
+            enjoymentString = "although I haven't enjoyed lessons at all"
         case 2:
-            enjoymentString = "I have seldom enjoyed lessons."
+            enjoymentString = "although I have seldom enjoyed lessons"
         case 3:
-            enjoymentString = "I have enjoyed most lessons."
+            enjoymentString = "and I have enjoyed most lessons"
         case 4:
-            enjoymentString = "I have really been enjoying lessons."
+            enjoymentString = "and I have really been enjoying lessons"
         case 5:
-            enjoymentString = "I have enjoyed every single lesson we have had."
+            enjoymentString = "and I have enjoyed every single lesson we have had"
         default:
-            enjoymentString = "Lessons have been enjoyable."
+            enjoymentString = "and lessons have been enjoyable"
         }
-        let finalString = "\(subject) is really fun."
+        let finalString = "\(subject) is interesting as always, \(enjoymentString). My effort in this subject has been \(effortString)."
+        
+        return finalString
     }
     
-    init(subject: String, code: String, effort: Int, enjoyment: Int, anticipation: String){
+    init(subject: String, code: String, effort: Int, enjoyment: Int){
         self.subject = subject
         self.code = code
         self.effort = effort
         self.enjoyment = enjoyment
-        self.anticipation = anticipation
-        self.finalComment = self.generateComment()
+        self.finalComment = Comment.generateComment(subject,effort,enjoyment)
     }
 }
