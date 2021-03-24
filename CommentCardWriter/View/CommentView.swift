@@ -7,15 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CommentView: View {
+    @EnvironmentObject var state: StateController
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Hello world")
+        //scroll view
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CommentView()
     }
 }
